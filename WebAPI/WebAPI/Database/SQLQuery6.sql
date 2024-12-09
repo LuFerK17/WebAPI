@@ -1,0 +1,14 @@
+CREATE TABLE Personas (
+	IdPersona INT IDENTITY(1,1) PRIMARY KEY,
+	Nombre NVARCHAR(100) NOT NULL,
+	Apellido NVARCHAR(100) NOT NULL,
+	Email NVARCHAR(150) UNIQUE NOT NULL,
+	FechaNacimiento DATE NOT NULL,
+	Telefono NVARCHAR(15),
+
+
+	AdicionadoPor NVARCHAR(100) NOT NULL,
+	FechaAdicion DATETIME DEFAULT GETDATE(),
+	Modificadopor NVARCHAR(100),
+	FechaModificacion DATETIME,
+	);
